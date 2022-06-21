@@ -1,0 +1,11 @@
+id: gblogwx_config
+name: GBlog-wx微信小程序
+author:
+  name: fuzui
+  website: https://www.geekera.cn/
+description: 微信小程序博客配置主题，请勿启用，仅用于拉取主题配置。
+logo:
+website: https://github.com/fuzui/GBlog-wx
+repo: https://github.com/fuzui/halo-theme-gblogwx-config
+version: 1.2.0
+require: 1.5.3

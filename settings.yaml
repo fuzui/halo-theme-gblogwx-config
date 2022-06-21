@@ -1,0 +1,259 @@
+# configurations
+# 详情请参考：https://halo.run/develop/theme.html#settings-yaml
+genernal:
+  label: 通用设置
+  items:
+    blog_title:
+      name: blog_title
+      label: 博客名
+      type: text
+      placeholder: "博客标题"
+      description: "注意：如填写，会覆盖原有博客名"
+    blog_logo:
+      name: blog_logo
+      label: logo
+      type: attachment
+      placeholder: "博客logo"
+      description: "注意：如填写，会覆盖原有logo"
+    guestbook_sheet_id:
+      name: guestbook_sheet_id
+      label: 留言页面Id
+      type: text
+      placeholder: "留言页面Id"
+      default: "2"
+      description: "可在数据库中查看"
+    cloud_is_open:
+      name: cloud_is_open
+      label: 云函数总开关
+      type: radio
+      data-type: bool
+      default: true
+      description: "开启前请确保已按照<a href='https://docs.geekera.cn/gblog-wx/open-cloud.html' target='_blank'>文档</a>配置"
+      options:
+        - value: true
+          label: 开
+        - value: false
+          label: 关
+    cloud_share_open:
+      name: cloud_share_open
+      label: 海报分享
+      type: radio
+      data-type: bool
+      default: false
+      description: "开启前请确保已按照<a href='https://docs.geekera.cn/gblog-wx/posters-share.html' target='_blank'>文档</a>配置"
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    cloud_check_message:
+      name: cloud_check_message
+      label: 敏感词检测
+      type: radio
+      data-type: bool
+      default: false
+      description: "开启前请确保已按照<a href='https://docs.geekera.cn/gblog-wx/check-message.html' target='_blank'>文档</a>配置"
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    cloud_admin_user:
+      name: cloud_admin_user
+      label: 后台免密登陆
+      type: radio
+      data-type: bool
+      default: false
+      description: "开启前请确保已按照<a href='https://docs.geekera.cn/gblog-wx/nosercet-login.html' target='_blank'>文档</a>配置"
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+personal_info:
+  label: 个人信息
+  items:
+    blog:
+      name: blog
+      label: 博客地址
+      type: text
+      placeholder: ""
+    qq:
+      name: qq
+      label: QQ
+      type: text
+      placeholder: ""
+    wx:
+      name: wx
+      label: 微信
+      type: text
+      placeholder: ""
+    mail:
+      name: mail
+      label: 邮箱
+      type: text
+      placeholder: ""
+    github:
+      name: github
+      label: Github
+      type: text
+      placeholder: ""
+    gitee:
+      name: gitee
+      label: Gitee
+      type: text
+      placeholder: ""
+    wx_mp:
+      name: wx_mp
+      label: 公众号二维码
+      type: attachment
+      placeholder: ""
+custom_style:
+  label: 自定义样式
+  items:
+    no_content_image:
+      name: no_content_image
+      label: 无内容占位图
+      type: attachment
+      default: "https://cdn.fuzui.net/basis/nocontent.png"
+    placeholder_image:
+      name: placeholder_image
+      label: 加载中占位图
+      type: attachment
+      default: "/images/default/image-loading.svg"
+    load_error_image:
+      name: load_error_image
+      label: 加载错误占位图
+      type: attachment
+      default: "/images/default/image-error.svg"
+    random_image:
+      name: random_image
+      label: 随机图
+      type: textarea
+      description: "英文分号(;)分割"
+      default: "https://cdn.fuzui.net/blog/bg2_1592326421605.jpg?x-oss-process=style/fz;
+        https://cdn.fuzui.net/blog/bg1_1592326421605.jpg?x-oss-process=style/fz;
+        https://cdn.fuzui.net/blog/blog01.jpeg?x-oss-process=style/fz;
+        https://cdn.fuzui.net/blog/blog03.jpeg?x-oss-process=style/fz;
+        https://cdn.fuzui.net/blog/blog04.jpeg?x-oss-process=style/fz;
+        https://cdn.fuzui.net/blog/blog05.jpeg?x-oss-process=style/fz;
+        https://cdn.fuzui.net/blog/blog06.jpeg?x-oss-process=style/fz;"
+    post_tag_style:
+      name: post_tag_style
+      label: 文章标签样式
+      type: textarea
+      description: "请填写严格的JSON格式"
+      default: '{
+  "table": "border-collapse:collapse;border-top:1px solid gray;border-left:1px solid gray;margin: 28rpx 0;",
+  "th": "border-right:1px solid gray;border-bottom:1px solid gray;background: #ccc;",
+  "td": "border-right:1px solid gray;border-bottom:1px solid gray;",
+  "blockquote":
+    "background-color:#e7f6ed;border-left:6px solid #4caf50;color:rgb(136, 136, 136);padding: 20rpx 40rpx 20rpx 30rpx;margin: 28rpx 0;",
+  "ul": "padding-left: 25px;word-wrap:break-all;",
+  "ol": "padding-left: 25px;word-wrap:break-all;",
+  "h1": "font-size: 1.5em;line-height: 50px;",
+  "h2": "font-size: 1.17em;line-height: 40px;",
+  "h3": "font-size: 0.83em;line-height: 30px;",
+  "h4": "font-size: 0.67em;line-height: 30px;",
+  "h5": "font-size: 0.50em;line-height: 30px;",
+  "code": "word-break: break-all;",
+  "pre > code": "white-space:nowrap;",
+  "video": "width: 100%"
+}'
+    post_container_style:
+      name: post_container_style
+      label: 文章容器样式
+      type: textarea
+      description: "eg: padding: 12px;font-size: 15px;"
+      default: "padding: 12px;font-size: 15px;line-height: 25px"
+    comment_tag_style:
+      name: comment_tag_style
+      label: 评论标签样式
+      type: textarea
+      description: "请填写严格的JSON格式"
+      default: '{
+  "table": "border-collapse:collapse;border-top:1px solid gray;border-left:1px solid gray;margin: 28rpx 0;",
+  "th": "border-right:1px solid gray;border-bottom:1px solid gray;background: #ccc;",
+  "td": "border-right:1px solid gray;border-bottom:1px solid gray;",
+  "blockquote":
+    "background-color:#e7f6ed;border-left:6px solid #4caf50;color:rgb(136, 136, 136);padding: 20rpx 40rpx 20rpx 30rpx;margin: 28rpx 0;",
+  "ul": "padding-left: 25px;word-wrap:break-all;",
+  "ol": "padding-left: 25px;word-wrap:break-all;",
+  "h1": "font-size: 1.5em;line-height: 50px;",
+  "h2": "font-size: 1.17em;line-height: 40px;",
+  "h3": "font-size: 0.83em;line-height: 30px;",
+  "h4": "font-size: 0.67em;line-height: 30px;",
+  "h5": "font-size: 0.50em;line-height: 30px;",
+  "code": "word-break: break-all;",
+  "pre > code": "white-space:nowrap;",
+  "video": "width: 100%",
+  "p": "margin: 0 0;"
+}'
+    comment_container_style:
+      name: comment_container_style
+      label: 评论容器样式
+      type: textarea
+      description: "eg: padding: 12px;font-size: 15px;"
+      default: ""
+    journal_tag_style:
+      name: journal_tag_style
+      label: 日记标签样式
+      type: textarea
+      description: "请填写严格的JSON格式"
+      default: '{
+  "p": "margin: 0 0;"
+}'
+    journal_container_style:
+      name: journal_container_style
+      label: 日记容器样式
+      type: textarea
+      description: "eg: padding: 12px;font-size: 15px;"
+      default: ""
+page_size:
+  label: 分页设置
+  items:
+    swiper_start:
+      name: blog
+      label: 轮播起始页
+      type: text
+      default: 6
+    page_size_swiper:
+      name: blog
+      label: 轮播数
+      type: text
+      default: 6
+    page_size_index:
+      name: blog
+      label: 每页文章数
+      type: text
+      default: 6
+    page_size_search:
+      name: blog
+      label: 每页搜索结果数
+      type: text
+      default: 6
+    page_size_category:
+      name: blog
+      label: 每页分类文章数
+      type: text
+      default: 6
+    page_size_tag:
+      name: blog
+      label: 标签每页文章数
+      type: text
+      default: 6
+    page_size_photo:
+      name: blog
+      label: 每页光影数
+      type: text
+      default: 6
+    page_size_journal:
+      name: blog
+      label: 每页日记数
+      type: text
+      default: 6
+    page_size_attachment:
+      name: blog
+      label: 每页附件数
+      type: text
+      default: 6
