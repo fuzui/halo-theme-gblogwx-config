@@ -209,6 +209,34 @@ custom_style:
       type: textarea
       description: "eg: padding: 12px;font-size: 15px;"
       default: ""
+page_layout:
+  label: 页面布局
+  items:
+    tab_bar_home:
+      name: tab_bar_home
+      label: 标签栏首页名称
+      type: text
+      default: "首页2"
+    tab_bar_category:
+      name: tab_bar_category
+      label: 标签栏分类名称
+      type: text
+      default: "分类3"
+    tab_bar_photo:
+      name: tab_bar_photo
+      label: 标签栏图库名称
+      type: text
+      default: "光影"
+    tab_bar_about:
+      name: tab_bar_about
+      label: 标签栏关于名称
+      type: text
+      default: "关于"
+    tab_bar_admin:
+      name: tab_bar_admin
+      label: 标签栏管理名称
+      type: text
+      default: "管理"
 page_size:
   label: 分页设置
   items:
