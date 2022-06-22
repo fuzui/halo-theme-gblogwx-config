@@ -244,44 +244,44 @@ page_size:
       name: blog
       label: 轮播起始页
       type: text
-      default: 6
+      default: 0
     page_size_swiper:
       name: blog
       label: 轮播数
       type: text
-      default: 6
+      default: 5
     page_size_index:
       name: blog
       label: 每页文章数
       type: text
-      default: 6
+      default: 10
     page_size_search:
       name: blog
       label: 每页搜索结果数
       type: text
-      default: 6
+      default: 10
     page_size_category:
       name: blog
       label: 每页分类文章数
       type: text
-      default: 6
+      default: 10
     page_size_tag:
       name: blog
       label: 标签每页文章数
       type: text
-      default: 6
+      default: 10
     page_size_photo:
       name: blog
       label: 每页光影数
       type: text
-      default: 6
+      default: 12
     page_size_journal:
       name: blog
       label: 每页日记数
       type: text
-      default: 6
+      default: 10
     page_size_attachment:
       name: blog
       label: 每页附件数
       type: text
-      default: 6
+      default: 12
